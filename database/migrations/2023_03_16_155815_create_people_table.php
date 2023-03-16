@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid')->index();
             $table->string('name');
             $table->string('last_name');
             $table->timestamps();
